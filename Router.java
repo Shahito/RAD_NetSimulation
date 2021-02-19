@@ -1,19 +1,30 @@
 package traceur_de_paquet;
 
-public class Router {
-	private Interfaces inter1;
-	private Interfaces inter2;
+import java.util.Arrays;
+
+public class Router extends Equipement {
+	private Interfaces[] inters;
 	
 	public Router() {
-		inter1=new Interfaces();
-		inter2=new Interfaces();
+		super();
+		this.inters[0]=new Interfaces();
+		this.inters[1]=new Interfaces();
 	}
 	
-	public Router(AddrIp ipaddr1,AddrMac macaddr1,AddrIp ipaddr2,AddrMac macaddr2) {
-		inter1.setIpaddr(ipaddr1);
-		inter1.setMacaddr(macaddr1);
-		inter2.setIpaddr(ipaddr2);
-		inter2.setMacaddr(macaddr2);
+	public Router(String name,Interfaces inter1,Interfaces inter2) {
+		super(name);
+		this.inters[0]=inter1;
+		this.inters[1]=inter2;
+	}
+
+	public Interfaces[] getInters() {return inters;}
+	public void setInters(Interfaces[] inters) {this.inters=inters;}
+	
+	public void setInter(int n,String name,short[] ip,short[] mask,String[] mac) {
+		AddrIp addrip=new AddrIp(ip,mask);
+		AddrMac addrmac=new AddrMac(mac);
+		Interfaces inter=new Interfaces(name,addrip,addrmac);
+		this.inters[n]=inter;
 	}
 	
 }

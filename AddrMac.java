@@ -10,7 +10,7 @@ public class AddrMac {
 	}
 	public AddrMac(String[] mac) {setMac(mac);}
 	
-	public String[] getMac() {return mac;}
+	public String[] getMac() {return this.mac;}
 	public void setMac(String[] mac) {
 		for(int n=0;n<6;n++) {
 			this.mac[n]=mac[n].toUpperCase();
