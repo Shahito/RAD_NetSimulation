@@ -31,8 +31,8 @@ public class Router extends Equipement {
 	@Override
 	public void transfer(Packet p) {
 		for(int n=0;n<NB_INTER;n++) {
-			if(isInNet(p.getIp_dest(),inters.get(n).getIpaddr())) {
-				inters.get(n).transfer(p);
+			if(isInNet(p.getIp_dest(),this.getInters().get(n).getIpaddr())) {
+				this.getInters().get(n).transfer(p);
 			}
 		}
 	}

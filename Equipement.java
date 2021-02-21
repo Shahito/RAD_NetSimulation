@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public abstract class Equipement {
 	private String name;
-	protected ArrayList<Interfaces> inters=new ArrayList<Interfaces>();
+	private ArrayList<Interfaces> inters=new ArrayList<Interfaces>();
 	
 	// Equipement instance counter
 	private static int nbEquipement=0;

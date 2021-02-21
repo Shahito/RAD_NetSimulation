@@ -16,7 +16,7 @@ public class Hub extends Equipement {
 	@Override
 	public void transfer(Packet p) {
 		for(int n=0;n<NB_INTER;n++) {
-			this.inters.get(n).transfer(p);
+			this.getInters().get(n).transfer(p);
 		}
 	}
 }
