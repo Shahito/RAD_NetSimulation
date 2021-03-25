@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public abstract class Computers extends Clients {
 	
-	final short NB_INTER=2;
+	// Définition du nombre d'interfaces pour les ordinateurs
+	private int nb_inter;
 	
 	// constructors
-	public Computers() {super();}
-	public Computers(String name) {super(name);}
-	public Computers(String name,ArrayList<Interfaces> inters) {super(name,inters);}
-	
-	// methods
-	
+	public Computers(int nb_inter) {super(nb_inter);}
+	public Computers(String name,int nb_inter) {super(name,nb_inter);}
+	public Computers(String name,int nb_inter,ArrayList<Interfaces> inters) {
+		super(name,nb_inter,inters);
+	}
 	
 }
-
+/*42795f536861*/
 
 
 
